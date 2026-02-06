@@ -9,40 +9,40 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="sluzby" data-testid="services-section" className="py-24 sm:py-32 bg-garage-zinc">
+    <section id="sluzby" data-testid="services-section" className="py-24 sm:py-32 bg-garage-zinc vintage-stripe">
       <div className="section-container">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="amber-line" />
-            <span className="font-heading text-garage-amber uppercase tracking-[0.3em] text-sm">
+            <div className="teal-line" />
+            <span className="font-heading text-garage-teal uppercase tracking-[0.3em] text-sm">
               Co nabízíme
             </span>
-            <div className="amber-line" />
+            <div className="teal-line" />
           </div>
           <h2 data-testid="services-title" className="section-title text-white">
-            Služby & <span className="text-garage-amber">Ceník</span>
+            Služby &amp; <span className="text-garage-teal">Ceník</span>
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto bg-garage-dark/80 backdrop-blur-sm border border-garage-navy/40 rounded-sm p-6 sm:p-10">
           {SERVICES.map((s, i) => (
             <div
               key={i}
               data-testid={`service-item-${i}`}
-              className="group py-6 border-b border-dashed border-zinc-700 last:border-0 hover:border-garage-amber/30 transition-colors"
+              className="group py-6 border-b border-dashed border-garage-navy last:border-0 hover:border-garage-teal/30 transition-colors"
             >
               <div className="flex items-baseline gap-2 mb-1">
-                <h3 className="font-heading text-xl sm:text-2xl uppercase tracking-wide text-white group-hover:text-garage-amber transition-colors">
+                <h3 className="font-heading text-xl sm:text-2xl uppercase tracking-wide text-white group-hover:text-garage-teal transition-colors">
                   {s.name}
                 </h3>
                 <div className="dotted-leader hidden sm:block" />
-                <span className="font-heading text-xl sm:text-2xl text-garage-amber font-bold">
+                <span className="font-heading text-xl sm:text-2xl text-garage-teal font-bold">
                   {s.price}
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <p className="font-body text-sm text-zinc-500">{s.desc}</p>
-                <span className="font-body text-xs text-zinc-600 uppercase tracking-wider">
+                <p className="font-body text-sm text-slate-500">{s.desc}</p>
+                <span className="font-body text-xs text-slate-600 uppercase tracking-wider">
                   {s.duration}
                 </span>
               </div>
@@ -51,13 +51,13 @@ export default function Services() {
         </div>
 
         <div className="text-center mt-16">
-          <p className="text-zinc-500 text-sm mb-6 font-body">
+          <p className="text-slate-500 text-sm mb-6 font-body">
             Ceny jsou orientační. Přesnou cenu určíme po konzultaci.
           </p>
           <a
             href="tel:+420737553735"
             data-testid="services-cta"
-            className="inline-block bg-garage-amber text-black font-heading font-bold text-base uppercase tracking-wider px-10 py-4 rounded-sm hover:bg-amber-400 transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.08)] active:shadow-none active:translate-x-1 active:translate-y-1"
+            className="inline-block bg-garage-teal text-garage-dark font-heading font-bold text-base uppercase tracking-wider px-10 py-4 rounded-sm hover:bg-teal-300 transition-all shadow-[4px_4px_0px_0px_rgba(45,212,191,0.1)] active:shadow-none active:translate-x-1 active:translate-y-1"
           >
             Objednat se na 737 553 735
           </a>

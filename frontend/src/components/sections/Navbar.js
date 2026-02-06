@@ -30,7 +30,7 @@ export default function Navbar() {
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-garage-dark/80 backdrop-blur-xl border-b border-white/10 shadow-lg"
+          ? "bg-garage-dark/85 backdrop-blur-xl border-b border-garage-navy/60 shadow-lg shadow-black/30"
           : "bg-transparent"
       }`}
     >
@@ -38,10 +38,10 @@ export default function Navbar() {
         <a
           href="#hero"
           data-testid="nav-logo"
-          className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-widest text-white hover:text-garage-amber transition-colors"
+          className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-widest text-white hover:text-garage-teal transition-colors"
           onClick={(e) => handleClick(e, "#hero")}
         >
-          LUKE<span className="text-garage-amber">-</span>HOLIČ
+          LUKE<span className="text-garage-teal">-</span>HOLI&Ccedil;
         </a>
 
         <div className="hidden md:flex items-center gap-10">
@@ -50,7 +50,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               data-testid={`nav-link-${l.href.slice(1)}`}
-              className="nav-link font-heading text-sm uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors"
+              className="nav-link font-heading text-sm uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-colors"
               onClick={(e) => handleClick(e, l.href)}
             >
               {l.label}
@@ -59,7 +59,7 @@ export default function Navbar() {
           <a
             href="tel:+420737553735"
             data-testid="nav-cta-call"
-            className="bg-garage-amber text-black font-heading font-bold text-sm uppercase tracking-wider px-6 py-3 rounded-sm hover:bg-amber-400 transition-all shadow-[3px_3px_0px_0px_rgba(255,255,255,0.08)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]"
+            className="bg-garage-teal text-garage-dark font-heading font-bold text-sm uppercase tracking-wider px-6 py-3 rounded-sm hover:bg-teal-300 transition-all shadow-[3px_3px_0px_0px_rgba(45,212,191,0.15)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]"
           >
             Zavolat
           </a>
@@ -77,7 +77,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div
           data-testid="mobile-menu"
-          className="md:hidden bg-garage-dark/95 backdrop-blur-xl border-t border-white/10 animate-fade-in-up"
+          className="md:hidden bg-garage-dark/95 backdrop-blur-xl border-t border-garage-navy/40 animate-fade-in-up"
         >
           <div className="section-container py-6 flex flex-col gap-5">
             {NAV_LINKS.map((l) => (
@@ -85,7 +85,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 data-testid={`mobile-link-${l.href.slice(1)}`}
-                className="font-heading text-lg uppercase tracking-wider text-zinc-300 hover:text-garage-amber transition-colors"
+                className="font-heading text-lg uppercase tracking-wider text-slate-300 hover:text-garage-teal transition-colors"
                 onClick={(e) => handleClick(e, l.href)}
               >
                 {l.label}
@@ -94,7 +94,7 @@ export default function Navbar() {
             <a
               href="tel:+420737553735"
               data-testid="mobile-cta-call"
-              className="bg-garage-amber text-black font-heading font-bold text-center uppercase tracking-wider px-6 py-3 rounded-sm mt-2"
+              className="bg-garage-teal text-garage-dark font-heading font-bold text-center uppercase tracking-wider px-6 py-3 rounded-sm mt-2"
             >
               Zavolat
             </a>

@@ -18,14 +18,14 @@ export default function OpeningHours() {
 
   return (
     <section data-testid="hours-section" className="py-24 sm:py-32 bg-garage-dark relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-garage-amber/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-garage-teal/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="section-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="amber-line" />
-              <span className="font-heading text-garage-amber uppercase tracking-[0.3em] text-sm">
+              <div className="teal-line" />
+              <span className="font-heading text-garage-teal uppercase tracking-[0.3em] text-sm">
                 Kdy nás najdete
               </span>
             </div>
@@ -33,15 +33,15 @@ export default function OpeningHours() {
             <h2 data-testid="hours-title" className="section-title text-white mb-6">
               Otevírací
               <br />
-              <span className="text-garage-amber">doba</span>
+              <span className="text-garage-teal">doba</span>
             </h2>
 
-            <p className="font-body text-zinc-400 text-base leading-relaxed mb-8">
+            <p className="font-body text-slate-400 text-base leading-relaxed mb-8">
               Objednání předem je nutné. Zavolejte nebo napište a domluvíme
               termín, který vám sedne.
             </p>
 
-            <div className="flex items-center gap-3 text-garage-amber">
+            <div className="flex items-center gap-3 text-garage-teal">
               <Clock size={20} />
               <span className="font-heading text-sm uppercase tracking-wider">
                 Pouze na objednání
@@ -49,18 +49,18 @@ export default function OpeningHours() {
             </div>
           </div>
 
-          <div className="bg-garage-zinc border border-zinc-800 rounded-sm p-8 sm:p-10">
+          <div className="bg-garage-zinc border border-garage-navy rounded-sm p-8 sm:p-10">
             {HOURS.map((h, i) => (
               <div
                 key={i}
                 data-testid={`hours-row-${i}`}
-                className={`flex items-center justify-between py-4 border-b border-zinc-800 last:border-0 ${
-                  i === todayIdx ? "text-garage-amber" : ""
+                className={`flex items-center justify-between py-4 border-b border-garage-navy/60 last:border-0 ${
+                  i === todayIdx ? "text-garage-teal" : ""
                 }`}
               >
                 <div className="flex items-center gap-3">
                   {i === todayIdx && (
-                    <div className="w-2 h-2 rounded-full bg-garage-amber animate-pulse" />
+                    <div className="w-2 h-2 rounded-full bg-garage-teal animate-pulse" />
                   )}
                   <span className="font-heading text-base uppercase tracking-wider">
                     {h.day}
@@ -69,10 +69,10 @@ export default function OpeningHours() {
                 <span
                   className={`font-body text-sm tracking-wider ${
                     h.closed
-                      ? "text-zinc-600"
+                      ? "text-slate-600"
                       : i === todayIdx
-                      ? "text-garage-amber"
-                      : "text-zinc-300"
+                      ? "text-garage-teal"
+                      : "text-slate-300"
                   }`}
                 >
                   {h.time}
