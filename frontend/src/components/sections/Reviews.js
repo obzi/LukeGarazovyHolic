@@ -4,43 +4,19 @@ const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/Luke-holi%C4%8D+z+gar%C3%A1%C5%BEe/@49.2219198,16.5873998,17z/data=!4m8!3m7!1s0x471295f0bdf8a047:0x4be49f339d522f5d!8m2!3d49.2219198!4d16.5873998!9m1!1b1!16s%2Fg%2F11s90x12hk";
 
 const REVIEWS = [
-  {
-    name: "P. H.",
-    text: "Skvělej přátelskej holič, luxusní atmosféra! Určitě doporučuju.",
-    rating: 5,
-  },
-  {
-    name: "O. B.",
-    text: "Pánské rock&rollové nebe. Díky za to!",
-    rating: 5,
-  },
-  {
-    name: "M. m. M.",
-    text: "Parádní holič, který mi vždy zlepší náladu!",
-    rating: 5,
-  },
-  {
-    name: "Ivan Barvík",
-    text: "Můžu vřele doporučit. Profesionální služby a přístup. Nadstandardní péče. Vždy fajn pokec. TOP!",
-    rating: 5,
-  },
-  {
-    name: "David Bařinka",
-    text: "Luke je už dlouhá léta má jasná volba. Holičstvím se vždy rozléhají melodie Stounů, v nabídce nachlazený Birell nebo Kofola, interiér vyladěný do posledního detailu a péče o vlasy je bezkonkurenční.",
-    rating: 5,
-  },
-  {
-    name: "Petr Kucera",
-    text: "Osobité, originální a stylové holičství. Sympaťák Luke, se kterým si dobře pokecáte, vás suprově ostříhá, nabídne vám nějaký pití, dá vám rady ohledně účesu a během toho si poslechnete rock/blues. Zkrátka pecka!",
-    rating: 5,
-  },
+  { name: "P. H.", text: "Skvělej přátelskej holič, luxusní atmosféra! Určitě doporučuju." },
+  { name: "O. B.", text: "Pánské rock&rollové nebe. Díky za to!" },
+  { name: "M. m. M.", text: "Parádní holič, který mi vždy zlepší náladu!" },
+  { name: "Ivan Barvík", text: "Můžu vřele doporučit. Profesionální služby a přístup. Nadstandardní péče. Vždy fajn pokec. TOP!" },
+  { name: "David Bařinka", text: "Luke je už dlouhá léta má jasná volba. Holičstvím se vždy rozléhají melodie Stounů, v nabídce nachlazený Birell nebo Kofola, interiér vyladěný do posledního detailu a péče o vlasy je bezkonkurenční." },
+  { name: "Petr Kucera", text: "Osobité, originální a stylové holičství. Sympaťák Luke, se kterým si dobře pokecáte, vás suprově ostříhá, nabídne vám nějaký pití, dá vám rady ohledně účesu a během toho si poslechnete rock/blues. Zkrátka pecka!" },
 ];
 
-function StarRow() {
+function Stars() {
   return (
     <div className="flex gap-1 mb-3">
       {[...Array(5)].map((_, i) => (
-        <svg key={i} className="w-4 h-4 text-garage-teal fill-current" viewBox="0 0 20 20">
+        <svg key={i} className="w-3.5 h-3.5 text-garage-rust fill-current" viewBox="0 0 20 20">
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
         </svg>
       ))}
@@ -50,87 +26,53 @@ function StarRow() {
 
 export default function Reviews() {
   return (
-    <section id="recenze" data-testid="reviews-section" className="py-24 sm:py-32 bg-garage-dark">
+    <section id="recenze" data-testid="reviews-section" className="py-24 sm:py-32 bg-garage-mid">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="teal-line" />
-            <span className="font-heading text-garage-teal uppercase tracking-[0.3em] text-sm">
-              Reálné recenze z Google
-            </span>
-            <div className="teal-line" />
+        <div className="text-center mb-14">
+          <div className="ornament mb-6">
+            <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Reálné recenze z Google</span>
           </div>
-          <h2 data-testid="reviews-title" className="section-title text-white">
+          <h2 data-testid="reviews-title" className="section-title text-garage-cream">
             <span className="text-garage-teal">5.0</span> z 5
           </h2>
-          <p className="text-slate-500 mt-4 font-body">
+          <p className="text-garage-metal mt-3 font-vintage italic text-sm">
             Na základě 46+ ověřených hodnocení na Google Maps
           </p>
-
-          <a
-            href={GOOGLE_REVIEWS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="reviews-google-badge"
-            className="inline-flex items-center gap-2 mt-5 px-4 py-2 bg-white/5 border border-garage-navy rounded-sm text-slate-400 text-xs font-body hover:border-garage-teal/40 hover:text-slate-200 transition-colors"
+          <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" data-testid="reviews-google-badge"
+            className="inline-flex items-center gap-2 mt-4 px-4 py-2 border border-garage-panel text-garage-metal text-xs font-body hover:border-garage-teal/40 hover:text-garage-cream-dark transition-colors"
           >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-            </svg>
+            <svg className="w-4 h-4" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             Ověřeno na Google Maps
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {REVIEWS.map((r, i) => (
-            <a
-              key={i}
-              href={GOOGLE_REVIEWS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <a key={i} href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer"
               data-testid={`review-card-${i}`}
-              className="block bg-garage-zinc border border-garage-navy rounded-sm p-6 sm:p-8 hover:border-garage-teal/30 transition-colors group"
+              className="block retro-card p-6 sm:p-7 hover:border-garage-teal/25 transition-colors group"
             >
-              <StarRow />
-              <p className="font-body text-slate-300 text-sm leading-relaxed mb-6 group-hover:text-slate-100 transition-colors">
+              <Stars />
+              <p className="font-body text-garage-cream-dark text-sm leading-relaxed mb-5 group-hover:text-garage-cream transition-colors">
                 &ldquo;{r.text}&rdquo;
               </p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-garage-teal/15 flex items-center justify-center">
-                    <span className="font-heading text-garage-teal font-bold text-sm">
-                      {r.name.charAt(0)}
-                    </span>
+                  <div className="w-9 h-9 rounded-full bg-garage-teal/15 flex items-center justify-center">
+                    <span className="font-heading text-garage-teal font-bold text-xs">{r.name.charAt(0)}</span>
                   </div>
-                  <span className="font-heading text-sm uppercase tracking-wider text-slate-400">
-                    {r.name}
-                  </span>
+                  <span className="font-heading text-xs uppercase tracking-wider text-garage-metal">{r.name}</span>
                 </div>
-                <svg className="w-4 h-4 text-slate-600" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                </svg>
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
               </div>
             </a>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <a
-            href={GOOGLE_REVIEWS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="reviews-google-link"
-            className="inline-flex items-center gap-2 border-2 border-garage-navy text-slate-300 font-heading text-sm uppercase tracking-wider px-8 py-3 rounded-sm hover:border-garage-teal hover:text-garage-teal transition-colors"
-          >
-            Všechny recenze na Google
-            <ExternalLink size={16} />
-          </a>
+          <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" data-testid="reviews-google-link"
+            className="inline-flex items-center gap-2 border-2 border-garage-panel text-garage-cream-dark font-heading text-sm uppercase tracking-wider px-8 py-3 hover:border-garage-teal hover:text-garage-teal transition-colors"
+          >Všechny recenze na Google <ExternalLink size={14} /></a>
         </div>
       </div>
     </section>
