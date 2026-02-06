@@ -2,21 +2,21 @@ import { Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer data-testid="footer" className="bg-garage-dark border-t border-zinc-800 py-16">
+    <footer data-testid="footer" className="bg-garage-dark border-t border-garage-navy/40 py-16">
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <h3 className="font-heading text-2xl font-bold uppercase tracking-widest text-white mb-4">
-              LUKE<span className="text-garage-amber">-</span>HOLIČ
+              LUKE<span className="text-garage-teal">-</span>HOLI&Ccedil;
             </h3>
-            <p className="font-body text-zinc-500 text-sm leading-relaxed">
+            <p className="font-body text-slate-500 text-sm leading-relaxed">
               Kde se potkává rock&apos;n&apos;roll s precizním střihem. Garáž plná stylu v
               srdci Králova Pole.
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-zinc-400 mb-4">
+            <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-slate-400 mb-4">
               Navigace
             </h4>
             <div className="flex flex-col gap-3">
@@ -31,7 +31,7 @@ export default function Footer() {
                   key={l.href}
                   href={l.href}
                   data-testid={`footer-link-${l.href.slice(1)}`}
-                  className="font-body text-sm text-zinc-500 hover:text-garage-amber transition-colors"
+                  className="font-body text-sm text-slate-500 hover:text-garage-teal transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document.querySelector(l.href)?.scrollIntoView({ behavior: "smooth" });
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-zinc-400 mb-4">
+            <h4 className="font-heading text-sm uppercase tracking-[0.2em] text-slate-400 mb-4">
               Sledujte nás
             </h4>
             <div className="flex gap-4">
@@ -53,7 +53,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="footer-instagram"
-                className="w-12 h-12 rounded-sm border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-garage-amber hover:border-garage-amber/50 transition-all"
+                className="w-12 h-12 rounded-sm border border-garage-navy flex items-center justify-center text-slate-400 hover:text-garage-teal hover:border-garage-teal/50 transition-all"
               >
                 <Instagram size={20} />
               </a>
@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="footer-facebook"
-                className="w-12 h-12 rounded-sm border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-garage-amber hover:border-garage-amber/50 transition-all"
+                className="w-12 h-12 rounded-sm border border-garage-navy flex items-center justify-center text-slate-400 hover:text-garage-teal hover:border-garage-teal/50 transition-all"
               >
                 <Facebook size={20} />
               </a>
@@ -70,12 +70,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-xs text-zinc-600">
+        <div className="border-t border-garage-navy/40 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-body text-xs text-slate-600">
             &copy; {new Date().getFullYear()} Luke-holič z garáže. Všechna práva
             vyhrazena.
           </p>
-          <p className="font-body text-xs text-zinc-700">
+          <p className="font-body text-xs text-slate-700">
             Skácelova 2057/23, Brno-Královo Pole
           </p>
         </div>

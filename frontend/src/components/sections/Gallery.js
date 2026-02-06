@@ -11,22 +11,22 @@ const GALLERY_ITEMS = [
   },
   {
     src: "https://images.unsplash.com/photo-1592845815495-377762cb930c?w=600&q=80",
-    alt: "Garážový detail",
+    alt: "Retro interiér",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1754327524477-057aa059c1f8?w=600&q=80",
-    alt: "Neonový nápis",
+    src: "https://images.unsplash.com/photo-1585747860019-8901a572bb28?w=600&q=80",
+    alt: "Vintage barbershop",
     span: "col-span-1 row-span-2",
   },
   {
     src: "https://images.unsplash.com/photo-1727519366940-fd9b926e362e?w=600&q=80",
-    alt: "Vintage rock styl",
+    alt: "Pánský styl",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=600&q=80",
-    alt: "Interiér garáže",
+    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
+    alt: "Barbershop atmosféra",
     span: "col-span-1 row-span-1",
   },
 ];
@@ -37,14 +37,14 @@ export default function Gallery() {
       <div className="section-container">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="amber-line" />
-            <span className="font-heading text-garage-amber uppercase tracking-[0.3em] text-sm">
+            <div className="teal-line" />
+            <span className="font-heading text-garage-teal uppercase tracking-[0.3em] text-sm">
               Atmosféra
             </span>
-            <div className="amber-line" />
+            <div className="teal-line" />
           </div>
           <h2 data-testid="gallery-title" className="section-title text-white">
-            Z <span className="text-garage-amber">garáže</span>
+            Z <span className="text-garage-teal">garáže</span>
           </h2>
         </div>
 
@@ -53,7 +53,7 @@ export default function Gallery() {
             <div
               key={i}
               data-testid={`gallery-item-${i}`}
-              className={`gallery-item ${item.span} rounded-sm overflow-hidden relative group cursor-pointer`}
+              className={`gallery-item ${item.span} rounded-sm overflow-hidden relative group cursor-pointer border border-garage-navy/30`}
             >
               <img
                 src={item.src}
@@ -61,7 +61,7 @@ export default function Gallery() {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-garage-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="absolute bottom-4 left-4 font-heading text-sm uppercase tracking-wider text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
                 {item.alt}
               </span>
