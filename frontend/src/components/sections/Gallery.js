@@ -1,10 +1,12 @@
+const GOOGLE_PHOTOS_URL = "https://www.google.com/maps/place/Luke-holi%C4%8D+z+gar%C3%A1%C5%BEe/@49.2219198,16.5873998,17z/data=!3m1!1s0x471295f0bdf8a047:0x4be49f339d522f5d";
+
 const GALLERY_ITEMS = [
-  { src: "https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?w=600&q=80", alt: "Barber střih", span: "col-span-1 row-span-2" },
-  { src: "https://images.unsplash.com/photo-1654097800369-abc063d657c4?w=600&q=80", alt: "Úprava vousů", span: "col-span-1 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1592845815495-377762cb930c?w=600&q=80", alt: "Retro interiér", span: "col-span-1 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1585747860019-8901a572bb28?w=600&q=80", alt: "Vintage barbershop", span: "col-span-1 row-span-2" },
-  { src: "https://images.unsplash.com/photo-1727519366940-fd9b926e362e?w=600&q=80", alt: "Pánský styl", span: "col-span-1 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80", alt: "Barbershop atmosféra", span: "col-span-1 row-span-1" },
+  { src: "https://lh5.googleusercontent.com/p/AF1QipOYW0WcYAxGDIZHFo5lbY2OUodC3wwxmXBRf3tl=w600-h450-k-no", alt: "Interiér holičství", span: "col-span-1 row-span-2" },
+  { src: "https://lh5.googleusercontent.com/p/AF1QipPyt1cihSdY9_eOvva7p97Aq3r7L26cKSNbSozJ=w600-h800-k-no", alt: "Detail holičství", span: "col-span-1 row-span-1" },
+  { src: "https://lh5.googleusercontent.com/p/AF1QipNw09RBDH1RrW-ygICDGPDztQTjcqv61U9WuOoG=w600-h450-k-no", alt: "Pracovní místo", span: "col-span-1 row-span-1" },
+  { src: "https://lh5.googleusercontent.com/p/AF1QipMisrwyF66EkxLvVmZsLme0nnVc2CD6UQp3dheO=w600-h800-k-no", alt: "Atmosféra garáže", span: "col-span-1 row-span-2" },
+  { src: "https://lh5.googleusercontent.com/p/AF1QipPN0Wnlz_0qylHTbK59yG9hh604jtmJSbo9AwDP=w600-h800-k-no", alt: "Barber vybavení", span: "col-span-1 row-span-1" },
+  { src: "https://lh5.googleusercontent.com/p/AF1QipM4_K6eb7WskSmhDQZe33C2hlg3KtN-lhKt3-I6=w600-h800-k-no", alt: "Luke v akci", span: "col-span-1 row-span-1" },
 ];
 
 export default function Gallery() {
@@ -18,11 +20,15 @@ export default function Gallery() {
           <h2 data-testid="gallery-title" className="section-title text-garage-cream">
             Z <span className="text-garage-teal">garáže</span>
           </h2>
+          <p className="text-garage-metal mt-3 font-vintage italic text-sm">
+            Reálné fotky z holičství
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 auto-rows-[200px] sm:auto-rows-[240px]">
           {GALLERY_ITEMS.map((item, i) => (
-            <div key={i} data-testid={`gallery-item-${i}`}
+            <a key={i} href={GOOGLE_PHOTOS_URL} target="_blank" rel="noopener noreferrer"
+              data-testid={`gallery-item-${i}`}
               className={`gallery-item ${item.span} overflow-hidden relative group cursor-pointer border border-garage-panel`}
             >
               <img src={item.src} alt={item.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -30,8 +36,15 @@ export default function Gallery() {
               <span className="absolute bottom-3 left-3 font-vintage italic text-sm text-garage-cream opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {item.alt}
               </span>
-            </div>
+            </a>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a href="https://www.instagram.com/luke_holic_z_garaze/" target="_blank" rel="noopener noreferrer"
+            data-testid="gallery-instagram-link"
+            className="font-vintage italic text-sm text-garage-metal hover:text-garage-teal transition-colors underline underline-offset-4"
+          >Více fotek na Instagramu &rarr;</a>
         </div>
       </div>
     </section>
