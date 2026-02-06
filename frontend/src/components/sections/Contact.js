@@ -19,7 +19,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-heading text-base uppercase tracking-wider text-garage-cream mb-1">Adresa</h3>
-                <p className="font-body text-garage-metal text-sm">Skácelova 2057/23<br />612 00 Brno-Královo Pole</p>
+                <a href="https://www.google.com/maps/place/Luke-holi%C4%8D+z+gar%C3%A1%C5%BEe/@49.2219198,16.5873998,17z" target="_blank" rel="noopener noreferrer" className="font-body text-garage-metal text-sm hover:text-garage-teal transition-colors">Skácelova 2057/23<br />612 00 Brno-Královo Pole</a>
               </div>
             </div>
 
