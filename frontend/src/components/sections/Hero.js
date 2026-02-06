@@ -9,9 +9,10 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <img
-          src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepD8_6DNr09qlJS4OZW3HrdK-zYNei3iVk4b4Yjvp7fCggdTGHFLZWFDQq-J8dDc8owBTA2bjzfQxd4WeJ9TA_RDhmjaEZegRkVQZfgFsgtRLxpD3kQkrIsIAVOaIwnthSIT1HgvA=s680-w680-h510-rw"
-          alt="Luke-holič z garáže interiér"
+          src="https://images.unsplash.com/photo-1585747860019-8901a572bb28?w=1920&q=80"
+          alt="Vintage barbershop interiér"
           className="w-full h-full object-cover"
+          style={{ filter: "saturate(1.2) hue-rotate(-10deg)" }}
         />
         <div className="hero-vignette absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-t from-garage-dark via-garage-dark/70 to-garage-dark/20" />
