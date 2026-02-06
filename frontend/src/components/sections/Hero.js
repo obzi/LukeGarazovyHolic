@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 export default function Hero() {
   return (
     <section id="hero" data-testid="hero-section"
-      className="relative min-h-screen flex items-end pb-20 sm:pb-28 overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
       <div className="absolute inset-0">
         <img
@@ -17,28 +17,26 @@ export default function Hero() {
       </div>
 
       <div className="section-container relative z-10 w-full">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-[1px] bg-garage-teal" />
-            <span data-testid="hero-tagline-top"
-              className="font-vintage italic text-garage-teal tracking-[0.15em] text-sm"
-            >Brno &middot; Královo Pole</span>
-          </div>
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
 
-          <h1 data-testid="hero-title"
-            className="font-heading text-5xl sm:text-7xl lg:text-8xl xl:text-9xl uppercase font-bold leading-[0.85] tracking-tight mb-6"
-          >
-            <span className="text-garage-cream">Luke</span>
-            <br />
-            <span className="text-garage-teal">Holič</span>
-            <br />
-            <span className="font-vintage italic font-normal text-garage-metal text-3xl sm:text-4xl lg:text-5xl tracking-wide">
+          <span data-testid="hero-tagline-top"
+            className="font-vintage italic text-garage-teal tracking-[0.2em] text-sm mb-6"
+          >&#9733; Brno &middot; Královo Pole &#9733;</span>
+
+          <h1 data-testid="hero-title" className="mb-8">
+            <span className="block font-heading text-garage-cream text-5xl sm:text-7xl lg:text-8xl uppercase tracking-wider">
+              Luke
+            </span>
+            <span className="block font-vintage italic text-garage-cream-dark text-2xl sm:text-3xl my-2 tracking-widest">
+              &#8212; holič &#8212;
+            </span>
+            <span className="block font-heading text-garage-teal text-4xl sm:text-6xl lg:text-7xl uppercase tracking-wider">
               z garáže
             </span>
           </h1>
 
           <p data-testid="hero-description"
-            className="font-body text-garage-cream-dark text-lg sm:text-xl max-w-lg leading-relaxed mb-10"
+            className="font-body text-garage-cream-dark text-base sm:text-lg max-w-md leading-relaxed mb-10"
           >
             Kde se potkává rock&apos;n&apos;roll s precizním střihem.
             Osobní přístup, garáž plná stylu a poctivé řemeslo.
@@ -46,17 +44,17 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="tel:+420737553735" data-testid="hero-cta-book"
-              className="bg-garage-teal text-garage-dark font-heading font-bold text-base uppercase tracking-wider px-8 py-4 hover:bg-garage-teal-light transition-colors text-center"
+              className="bg-garage-teal text-garage-dark font-heading text-base uppercase tracking-wider px-10 py-4 hover:bg-garage-teal-light transition-colors text-center"
             >Objednat se</a>
             <a href="#sluzby" data-testid="hero-cta-services"
-              className="border-2 border-garage-cream-dark/30 text-garage-cream font-heading text-base uppercase tracking-wider px-8 py-4 hover:border-garage-teal hover:text-garage-teal transition-colors text-center"
+              className="border-2 border-garage-cream-dark/30 text-garage-cream font-heading text-base uppercase tracking-wider px-10 py-4 hover:border-garage-teal hover:text-garage-teal transition-colors text-center"
               onClick={(e) => { e.preventDefault(); document.querySelector("#sluzby")?.scrollIntoView({ behavior: "smooth" }); }}
             >Služby &amp; Ceník</a>
           </div>
         </div>
 
         <div data-testid="hero-rating-badge"
-          className="absolute bottom-20 right-4 sm:right-8 hidden lg:flex flex-col items-center gap-1 float-animation stamp-border bg-garage-dark/80 backdrop-blur-sm px-5 py-4"
+          className="absolute bottom-24 right-4 sm:right-8 hidden lg:flex flex-col items-center gap-1 float-animation stamp-border bg-garage-dark/80 backdrop-blur-sm px-5 py-4"
         >
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
@@ -65,7 +63,7 @@ export default function Hero() {
               </svg>
             ))}
           </div>
-          <span className="font-heading text-2xl font-bold text-garage-cream">5.0</span>
+          <span className="font-heading text-2xl text-garage-cream">5.0</span>
           <span className="text-garage-metal text-xs font-vintage italic">46+ recenzí</span>
         </div>
       </div>
