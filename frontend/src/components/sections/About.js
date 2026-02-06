@@ -8,7 +8,7 @@ export default function About() {
           <div className="relative">
             <div className="stamp-border overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1585747860019-8901a572bb28?w=800&q=80"
+                src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80"
                 alt="Interiér holičství"
                 data-testid="about-image"
                 className="w-full h-[480px] object-cover"
