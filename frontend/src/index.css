@@ -5,6 +5,9 @@
 @layer base {
   :root {
     --radius: 0.25rem;
+    --teal: #2dd4bf;
+    --navy-dark: #070d17;
+    --navy: #0c1525;
   }
 
   * {
@@ -20,8 +23,8 @@
 
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #0f0f10;
-    color: #e4e4e7;
+    background-color: var(--navy-dark);
+    color: #d1d5db;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -36,15 +39,15 @@
     height: 100%;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.03;
+    opacity: 0.025;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 256px 256px;
   }
 
   ::selection {
-    background-color: #f59e0b;
-    color: #0f0f10;
+    background-color: #2dd4bf;
+    color: #070d17;
   }
 
   ::-webkit-scrollbar {
@@ -52,16 +55,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #18181b;
+    background: #0c1525;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #52525b;
+    background: #1e3a5f;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #f59e0b;
+    background: #2dd4bf;
   }
 }
 
@@ -74,8 +77,8 @@
     @apply font-heading text-4xl sm:text-5xl lg:text-6xl uppercase tracking-wider font-bold;
   }
 
-  .amber-line {
-    @apply w-16 h-1 bg-garage-amber;
+  .teal-line {
+    @apply w-16 h-1 bg-garage-teal;
   }
 
   .glass-card {

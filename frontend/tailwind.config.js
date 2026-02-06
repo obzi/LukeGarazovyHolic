@@ -13,13 +13,15 @@ module.exports = {
                 },
                 colors: {
                         garage: {
-                                dark: '#0f0f10',
-                                zinc: '#18181b',
-                                panel: '#27272a',
-                                amber: '#f59e0b',
-                                'amber-dark': '#d97706',
-                                metal: '#9ca3af',
-                                rust: '#c2410c',
+                                dark: '#070d17',
+                                zinc: '#0c1525',
+                                panel: '#162033',
+                                teal: '#2dd4bf',
+                                'teal-deep': '#0d9488',
+                                cream: '#f0e6d3',
+                                metal: '#8b9cb7',
+                                navy: '#1e3a5f',
+                                stripe: '#0e2a4a',
                         },
                 },
                 borderRadius: {

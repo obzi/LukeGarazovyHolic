@@ -1,9 +1,9 @@
 .hero-vignette {
-  background: radial-gradient(ellipse at center, transparent 0%, #0f0f10 75%);
+  background: radial-gradient(ellipse at center, transparent 0%, #070d17 75%);
 }
 
 .dotted-leader {
-  border-bottom: 2px dotted #52525b;
+  border-bottom: 2px dotted #1e3a5f;
   flex: 1;
   margin: 0 12px;
   position: relative;
@@ -16,12 +16,12 @@
 
 .gallery-item img {
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
-  filter: grayscale(40%);
+  filter: grayscale(30%) saturate(0.8);
 }
 
 .gallery-item:hover img {
   transform: scale(1.08);
-  filter: grayscale(0%);
+  filter: grayscale(0%) saturate(1.1);
 }
 
 @keyframes float {
@@ -44,10 +44,20 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #f59e0b;
+  background-color: #2dd4bf;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.vintage-stripe {
+  background: repeating-linear-gradient(
+    90deg,
+    #0c1525 0px,
+    #0c1525 60px,
+    #0e2a4a 60px,
+    #0e2a4a 62px
+  );
 }
