@@ -1,0 +1,170 @@
+{
+  "project_name": "Luke-holič z garáže",
+  "design_philosophy": {
+    "theme": "Retro Garage Industrial",
+    "emotional_tone": "Authentic, Raw, Masculine, Cool, Welcoming",
+    "key_attributes": [
+      "Dark Mode Only",
+      "Vintage Industrial",
+      "Rock & Roll Atmosphere",
+      "Garage Workshop Aesthetic"
+    ],
+    "principles": [
+      "Fusion over Imitation: Mix mechanic shop vibes with barbershop precision.",
+      "Texture is Key: Use grain, noise, and metal textures to avoid digital flatness.",
+      "Lighting: Mimic warm amber workshop lights against dark walls.",
+      "Typography as Decor: Big, bold, condensed fonts like vintage posters."
+    ]
+  },
+  "typography": {
+    "font_families": {
+      "headings": "Oswald, sans-serif",
+      "body": "Montserrat, sans-serif",
+      "accents": "Anton, sans-serif"
+    },
+    "installation_steps": [
+      "npm install @fontsource/oswald @fontsource/montserrat @fontsource/anton"
+    ],
+    "tailwind_config": {
+      "fontFamily": {
+        "heading": ["Oswald", "sans-serif"],
+        "body": ["Montserrat", "sans-serif"],
+        "accent": ["Anton", "sans-serif"]
+      }
+    },
+    "usage_rules": {
+      "headings": "Uppercase, tracking-wide, bold weights (700/500).",
+      "body": "Clean, readable, slightly loose leading for dark mode.",
+      "hero_text": "Massive, overlaying images, 'poster' style."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "primary": "#0f0f10",
+        "secondary": "#18181b",
+        "tertiary": "#27272a"
+      },
+      "text": {
+        "primary": "#e4e4e7",
+        "secondary": "#a1a1aa",
+        "muted": "#52525b"
+      },
+      "accent": {
+        "primary": "#f59e0b",
+        "secondary": "#d97706",
+        "metal": "#9ca3af",
+        "rust": "#c2410c"
+      },
+      "status": {
+        "success": "#10b981",
+        "error": "#ef4444"
+      }
+    },
+    "gradients": {
+      "amber_glow": "linear-gradient(to right, #f59e0b, #d97706)",
+      "metal_sheen": "linear-gradient(135deg, #e4e4e7 0%, #9ca3af 100%)",
+      "dark_vignette": "radial-gradient(circle, transparent 0%, #09090b 100%)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid and Asymmetric Broken Grid",
+    "spacing": "Generous (p-8, p-12) to allow 'breathing room' in the dark.",
+    "container_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "sections": {
+      "hero": {
+        "style": "Full viewport height, video/image background with heavy vignette overlay. Text bottom-left or centered asymmetric.",
+        "elements": ["Massive H1", "Tagline", "Primary CTA (Book Now)"]
+      },
+      "services": {
+        "style": "Workshop Menu / Price List. Tabular data with dotted leaders or mechanic invoice style.",
+        "elements": ["Service Name", "Description (small)", "Price", "Duration"]
+      },
+      "about": {
+        "style": "Split layout: Image (Garage interior) + Text (Story). Polaroid style photo frames.",
+        "elements": ["Story text", "Signature", "Garage Image"]
+      },
+      "gallery": {
+        "style": "Masonry Grid. Mix of close-ups (cuts) and wide shots (shop vibe).",
+        "elements": ["Hover effects: Scale up + Grayscale to Color"]
+      },
+      "reviews": {
+        "style": "Horizontal scroll or Grid of cards. Industrial card style (bolts/rivets visual cues).",
+        "elements": ["Stars (Amber)", "Review Text", "Client Name"]
+      },
+      "contact": {
+        "style": "Dark Map (Custom styles). Large footer area.",
+        "elements": ["Address", "Phone", "Social Links", "Opening Hours"]
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-amber-500 text-black font-bold uppercase tracking-wider hover:bg-amber-400 rounded-sm shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)] transition-all active:shadow-none active:translate-x-1 active:translate-y-1",
+      "secondary": "border-2 border-zinc-700 text-zinc-100 uppercase tracking-wider hover:border-amber-500 hover:text-amber-500 rounded-sm transition-colors",
+      "ghost": "text-zinc-400 hover:text-white uppercase tracking-widest text-sm"
+    },
+    "cards": {
+      "style": "bg-zinc-900 border border-zinc-800 rounded-sm p-6 hover:border-amber-500/50 transition-colors",
+      "variants": ["Service Card", "Review Card", "Feature Card"]
+    },
+    "navigation": {
+      "style": "Sticky glassmorphism (dark), backdrop-blur-md, border-b border-white/10.",
+      "logo": "Text logo 'LUKE-HOLIČ' in Oswald font."
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px or 2px. Color: Amber-500 or Zinc-400."
+    }
+  },
+  "visual_enhancers": {
+    "texture": "Add a subtle noise overlay to the entire body background (opacity 0.03).",
+    "motion": {
+      "reveal": "Framer Motion: fade-in-up for sections.",
+      "hover": "Scale 1.05 for images.",
+      "scroll": "Parallax effect on hero background."
+    },
+    "borders": "1px solid border-zinc-800. Use 'dashed' borders for separation lines to mimic tear-off receipts."
+  },
+  "images": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1635108198854-26645ffe6714?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwYmFyYmVyJTIwc2hvcCUyMGdhcmFnZSUyMGludGVyaW9yfGVufDB8fHx8MTc3MDQxMjE4MHww&ixlib=rb-4.1.0&q=85",
+      "alt": "Garage Interior Dark"
+    },
+    "about_section": {
+      "url": "https://images.unsplash.com/photo-1551522435-a13afa10f103?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHx2aW50YWdlJTIwYmFyYmVyJTIwc2hvcCUyMGdhcmFnZSUyMGludGVyaW9yfGVufDB8fHx8MTc3MDQxMjE4MHww&ixlib=rb-4.1.0&q=85",
+      "alt": "Vintage motorcycle in garage"
+    },
+    "service_bg": {
+      "url": "https://images.unsplash.com/photo-1592845815495-377762cb930c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHx2aW50YWdlJTIwbW90b3JjeWNsZSUyMGdhcmFnZSUyMHRvb2xzJTIwZGV0YWlsc3xlbnwwfHx8fDE3NzA0MTIxODF8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Motorcycle Engine Detail"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBoYWlyY3V0JTIwbWFufGVufDB8fHx8MTc3MDQxMjE5NHww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1654097800369-abc063d657c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxiYXJiZXIlMjBoYWlyY3V0JTIwbWFufGVufDB8fHx8MTc3MDQxMjE5NHww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1754327524477-057aa059c1f8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxuZW9uJTIwc2lnbiUyMG9wZW4lMjBiYXJ8ZW58MHx8fHwxNzcwNDEyMTk1fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1727519366940-fd9b926e362e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxsZWF0aGVyJTIwamFja2V0JTIwdmludGFnZSUyMHJvY2slMjBhbmQlMjByb2xsfGVufDB8fHx8MTc3MDQxMjE5NXww&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for Nav and floating elements.",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures/noise overlays are HIGHLY RECOMMENDED.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Use `lucide-react` for icons."
+  ],
+  "instructions_to_main_agent": [
+    "1. Install fonts: `npm install @fontsource/oswald @fontsource/montserrat`.",
+    "2. Configure `tailwind.config.js` with the provided colors and font families.",
+    "3. Create a global noise texture in `index.css`.",
+    "4. Build the landing page using the 'broken grid' layout for the hero.",
+    "5. Ensure the 'Book Now' CTA is prominent and uses the primary Amber color.",
+    "6. Use the provided image URLs for specific sections.",
+    "7. Add the 'Garage Story' in the About section.",
+    "8. Ensure the map in Contact section is styled dark (use CSS filter if using an iframe/image or specific map style)."
+  ]
+}
