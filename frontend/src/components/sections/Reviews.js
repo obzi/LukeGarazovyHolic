@@ -1,32 +1,37 @@
+import { ExternalLink } from "lucide-react";
+
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/place/Luke-holi%C4%8D+z+gar%C3%A1%C5%BEe/@49.2219198,16.5873998,17z/data=!4m8!3m7!1s0x471295f0bdf8a047:0x4be49f339d522f5d!8m2!3d49.2219198!4d16.5873998!9m1!1b1!16s%2Fg%2F11s90x12hk";
+
 const REVIEWS = [
   {
-    name: "David B.",
-    text: "Luke je už dlouhá léta má jasná volba. Holičstvím se vždy rozléhají melodie Stounů, v nabídce nachlazený Birell nebo Kofola, interiér vyladěný do posledního detailu a péče o vlasy je bezkonkurenční.",
+    name: "P. H.",
+    text: "Skvělej přátelskej holič, luxusní atmosféra! Určitě doporučuju.",
     rating: 5,
   },
   {
-    name: "Petr K.",
-    text: "Osobité, originální a stylové holičství. Sympaťák Luke, se kterým si dobře pokecáte, vás suprově ostříhá, nabídne vám nějaký pití a dá vám rady ohledně účesu. Zkrátka pecka!",
-    rating: 5,
-  },
-  {
-    name: "Nicolas D.",
-    text: "První návštěva — velmi spokojen s účesem i bradou. S Lukem řeč nestála, příjemně jsme pokecali a nakonec i poradil s péčí o vlasy i bradu. Určitě navštívím znovu!",
-    rating: 5,
-  },
-  {
-    name: "Juraj S.",
-    text: "Příjemná atmosféra, skvělý interiér, střih bez chyby. Luke je profesionál a pohoďák.",
-    rating: 5,
-  },
-  {
-    name: "Ondřej B.",
+    name: "O. B.",
     text: "Pánské rock&rollové nebe. Díky za to!",
     rating: 5,
   },
   {
-    name: "Ivan B.",
+    name: "M. m. M.",
+    text: "Parádní holič, který mi vždy zlepší náladu!",
+    rating: 5,
+  },
+  {
+    name: "Ivan Barvík",
     text: "Můžu vřele doporučit. Profesionální služby a přístup. Nadstandardní péče. Vždy fajn pokec. TOP!",
+    rating: 5,
+  },
+  {
+    name: "David Bařinka",
+    text: "Luke je už dlouhá léta má jasná volba. Holičstvím se vždy rozléhají melodie Stounů, v nabídce nachlazený Birell nebo Kofola, interiér vyladěný do posledního detailu a péče o vlasy je bezkonkurenční.",
+    rating: 5,
+  },
+  {
+    name: "Petr Kucera",
+    text: "Osobité, originální a stylové holičství. Sympaťák Luke, se kterým si dobře pokecáte, vás suprově ostříhá, nabídne vám nějaký pití, dá vám rady ohledně účesu a během toho si poslechnete rock/blues. Zkrátka pecka!",
     rating: 5,
   },
 ];
@@ -47,54 +52,84 @@ export default function Reviews() {
   return (
     <section id="recenze" data-testid="reviews-section" className="py-24 sm:py-32 bg-garage-dark">
       <div className="section-container">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="amber-line" />
             <span className="font-heading text-garage-amber uppercase tracking-[0.3em] text-sm">
-              Co říkají zákazníci
+              Reálné recenze z Google
             </span>
             <div className="amber-line" />
           </div>
           <h2 data-testid="reviews-title" className="section-title text-white">
             <span className="text-garage-amber">5.0</span> z 5
           </h2>
-          <p className="text-zinc-500 mt-4 font-body">Na základě 46+ hodnocení na Google</p>
+          <p className="text-zinc-500 mt-4 font-body">
+            Na základě 46+ ověřených hodnocení na Google Maps
+          </p>
+
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="reviews-google-badge"
+            className="inline-flex items-center gap-2 mt-5 px-4 py-2 bg-white/5 border border-zinc-800 rounded-sm text-zinc-400 text-xs font-body hover:border-garage-amber/40 hover:text-zinc-200 transition-colors"
+          >
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            Ověřeno na Google Maps
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {REVIEWS.map((r, i) => (
-            <div
+            <a
               key={i}
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               data-testid={`review-card-${i}`}
-              className="bg-garage-zinc border border-zinc-800 rounded-sm p-6 sm:p-8 hover:border-garage-amber/30 transition-colors group"
+              className="block bg-garage-zinc border border-zinc-800 rounded-sm p-6 sm:p-8 hover:border-garage-amber/30 transition-colors group"
             >
               <StarRow />
               <p className="font-body text-zinc-300 text-sm leading-relaxed mb-6 group-hover:text-zinc-100 transition-colors">
                 &ldquo;{r.text}&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-garage-amber/20 flex items-center justify-center">
-                  <span className="font-heading text-garage-amber font-bold text-sm">
-                    {r.name.charAt(0)}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-garage-amber/20 flex items-center justify-center">
+                    <span className="font-heading text-garage-amber font-bold text-sm">
+                      {r.name.charAt(0)}
+                    </span>
+                  </div>
+                  <span className="font-heading text-sm uppercase tracking-wider text-zinc-400">
+                    {r.name}
                   </span>
                 </div>
-                <span className="font-heading text-sm uppercase tracking-wider text-zinc-400">
-                  {r.name}
-                </span>
+                <svg className="w-4 h-4 text-zinc-600" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
         <div className="text-center mt-12">
           <a
-            href="https://www.google.com/maps/place/Luke-holi%C4%8D+z+gar%C3%A1%C5%BEe/@49.2219198,16.5873998,17z"
+            href={GOOGLE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="reviews-google-link"
-            className="border-2 border-zinc-700 text-zinc-300 font-heading text-sm uppercase tracking-wider px-8 py-3 rounded-sm hover:border-garage-amber hover:text-garage-amber transition-colors inline-block"
+            className="inline-flex items-center gap-2 border-2 border-zinc-700 text-zinc-300 font-heading text-sm uppercase tracking-wider px-8 py-3 rounded-sm hover:border-garage-amber hover:text-garage-amber transition-colors"
           >
             Všechny recenze na Google
+            <ExternalLink size={16} />
           </a>
         </div>
       </div>
