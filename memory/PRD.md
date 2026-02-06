@@ -33,8 +33,8 @@ Vytvořit moderní responzivní webovou prezentaci pro barbershop "Luke-holič z
 - [x] Kontakt (adresa s odkazem na mapy, telefon, sociální sítě, Google Maps embed)
 - [x] SVG favicon s nůžkami
 - [x] SEO: meta tagy, Open Graph, Twitter Cards, JSON-LD BarberShop schema
-- [x] **Retro garážový design v4**: Warm dark (#1a1814), vintage teal (#1a9e8f), cream text, Playfair Display serif, stamp borders, barber-stripe patterns, sepia filters, grain texture
-- [x] Testing: 98-100% pass rate (iterace 1-4)
+- [x] **Retro garážový design v5**: Alfa Slab One headings + Lora serif body, barber blue (#1586a5), warm dark, stamp borders, barber-stripe, Playfair Display italic
+- [x] Testing: 98-100% pass rate (iterace 1-5)
 
 ## Business Info
 - **Název**: Luke-holič z garáže
