@@ -10,7 +10,7 @@ export default function Hero() {
           src="https://images.unsplash.com/photo-1585747860019-8901a572bb28?w=1920&q=80"
           alt="Vintage barbershop"
           className="w-full h-full object-cover"
-          style={{ filter: "sepia(25%) saturate(0.9) brightness(0.55)" }}
+          style={{ filter: "sepia(20%) saturate(0.85) brightness(0.7)" }}
         />
         <div className="hero-vignette absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-t from-garage-dark via-garage-dark/60 to-transparent" />
