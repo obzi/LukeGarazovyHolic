@@ -43,14 +43,25 @@
 .barber-stripe {
   background: repeating-linear-gradient(
     -45deg,
-    transparent 0px, transparent 12px,
-    rgba(26,158,143,0.06) 12px, rgba(26,158,143,0.06) 14px
+    transparent 0px, transparent 18px,
+    rgba(26,158,143,0.04) 18px, rgba(26,158,143,0.04) 20px
   );
 }
 
 /* vintage stamp border */
 .stamp-border {
-  border: 2px solid #3d362e;
+  border: 3px solid #3d362e;
   outline: 1px solid #3d362e;
-  outline-offset: 4px;
+  outline-offset: 5px;
+}
+
+/* aged paper section */
+.aged-paper {
+  background:
+    linear-gradient(135deg, rgba(44,38,32,0.3) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(44,38,32,0.3) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(44,38,32,0.3) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(44,38,32,0.3) 25%, transparent 25%);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 0, 2px -2px, 0px 2px;
 }
