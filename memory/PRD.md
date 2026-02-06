@@ -29,13 +29,14 @@ Vytvořit moderní responzivní webovou prezentaci pro barbershop "Luke-holič z
 - [x] Služby & ceník (mechanic invoice styl s dotted leaders)
 - [x] Otevírací doba (Po-Pá 14-20, So-Ne zavřeno)
 - [x] Galerie (bento grid, 6 obrázků, hover efekty)
-- [x] 6 reálných Google recenzí (P.H., O.B., M.m.M., Barvík, Bařinka, Kucera) s badge "Ověřeno na Google Maps"
+- [x] 6 reálných Google recenzí s badge "Ověřeno na Google Maps"
 - [x] Funkční odkaz na všechny recenze na Google Maps
 - [x] Kontakt (adresa, telefon, sociální sítě, Google Maps)
 - [x] Footer s navigací a sociálními odkazy
 - [x] Plná responzivita (mobile + desktop)
 - [x] SEO: meta tagy, Open Graph, Twitter Cards, JSON-LD BarberShop schema
-- [x] Testing: 100% pass rate (iteration 1 + 2)
+- [x] **Retro garážový design v3**: Warm dark (#1a1814), vintage teal (#1a9e8f), cream text, Playfair Display serif, stamp borders, barber-stripe patterns, sepia filters
+- [x] Testing: 100% pass rate (iteration 1 + 2 + 3)
 
 ## Business Info
 - **Název**: Luke-holič z garáže
