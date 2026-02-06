@@ -21,22 +21,20 @@ Vytvořit moderní responzivní webovou prezentaci pro barbershop "Luke-holič z
 - Sekce: Hero, O nás, Služby, Otevírací doba, Galerie, Recenze, Kontakt, Footer
 
 ## What's Been Implemented (2026-02-06)
-- [x] Hero sekce s velkou typografií a CTA
+- [x] Hero sekce s reálnou fotkou z holičství
 - [x] Navigace (sticky, glassmorphism, mobilní hamburger menu)
 - [x] Kontaktní lišta pod hero (telefon, adresa, otevírací doba)
-- [x] O nás sekce s příběhem a 3 feature ikonami
-- [x] Ocenění Orlové Krásy (5 medailí 2024-2026, odkaz na profil)
-- [x] Služby & ceník (mechanic invoice styl s dotted leaders)
-- [x] Otevírací doba (Po-Pá 14-20, So-Ne zavřeno)
-- [x] Galerie (bento grid, 6 obrázků, hover efekty)
+- [x] O nás sekce s reálnou fotkou interiéru
+- [x] Ocenění Orlové Krásy (5 medailí 2024-2026)
+- [x] Služby & ceník
+- [x] Otevírací doba (Po-Pá 14-20)
+- [x] Galerie s 6 reálnými fotkami z Google Maps (staženy lokálně)
 - [x] 6 reálných Google recenzí s badge "Ověřeno na Google Maps"
-- [x] Funkční odkaz na všechny recenze na Google Maps
-- [x] Kontakt (adresa, telefon, sociální sítě, Google Maps)
-- [x] Footer s navigací a sociálními odkazy
-- [x] Plná responzivita (mobile + desktop)
+- [x] Kontakt (adresa s odkazem na mapy, telefon, sociální sítě, Google Maps embed)
+- [x] SVG favicon s nůžkami
 - [x] SEO: meta tagy, Open Graph, Twitter Cards, JSON-LD BarberShop schema
-- [x] **Retro garážový design v3**: Warm dark (#1a1814), vintage teal (#1a9e8f), cream text, Playfair Display serif, stamp borders, barber-stripe patterns, sepia filters
-- [x] Testing: 100% pass rate (iteration 1 + 2 + 3)
+- [x] **Retro garážový design v4**: Warm dark (#1a1814), vintage teal (#1a9e8f), cream text, Playfair Display serif, stamp borders, barber-stripe patterns, sepia filters, grain texture
+- [x] Testing: 98-100% pass rate (iterace 1-4)
 
 ## Business Info
 - **Název**: Luke-holič z garáže
