@@ -8,11 +8,11 @@ export default function About() {
           <div className="relative">
             <div className="stamp-border overflow-hidden">
               <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepD8_6DNr09qlJS4OZW3HrdK-zYNei3iVk4b4Yjvp7fCggdTGHFLZWFDQq-J8dDc8owBTA2bjzfQxd4WeJ9TA_RDhmjaEZegRkVQZfgFsgtRLxpD3kQkrIsIAVOaIwnthSIT1HgvA=s680-w680-h510-rw"
+                src="https://images.unsplash.com/photo-1585747860019-8901a572bb28?w=800&q=80"
                 alt="Interiér holičství"
                 data-testid="about-image"
                 className="w-full h-[480px] object-cover"
-                style={{ filter: "sepia(10%) saturate(0.95)" }}
+                style={{ filter: "sepia(15%) saturate(0.9)" }}
               />
             </div>
             <div className="absolute -top-3 -left-3 bg-garage-teal text-garage-dark font-heading font-bold text-xs uppercase tracking-[0.2em] px-4 py-2">
