@@ -2,6 +2,7 @@ import "@/App.css";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Awards from "@/components/sections/Awards";
 import Services from "@/components/sections/Services";
 import OpeningHours from "@/components/sections/OpeningHours";
 import Gallery from "@/components/sections/Gallery";
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Awards />
       <Services />
       <OpeningHours />
       <Gallery />
