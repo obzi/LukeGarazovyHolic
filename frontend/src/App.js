@@ -1,6 +1,7 @@
 import "@/App.css";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
+import ContactBar from "@/components/sections/ContactBar";
 import About from "@/components/sections/About";
 import Awards from "@/components/sections/Awards";
 import Services from "@/components/sections/Services";
@@ -15,6 +16,7 @@ function App() {
     <div className="min-h-screen bg-garage-dark">
       <Navbar />
       <Hero />
+      <ContactBar />
       <About />
       <Awards />
       <Services />
