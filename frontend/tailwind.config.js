@@ -8,7 +8,7 @@ module.exports = {
   theme: {
         extend: {
                 fontFamily: {
-                        heading: ['Lilita One', 'cursive'],
+                        heading: ['Righteous', 'cursive'],
                         body: ['Lora', 'serif'],
                         vintage: ['Playfair Display', 'serif'],
                 },
