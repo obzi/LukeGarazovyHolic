@@ -37,7 +37,7 @@ export default function About() {
 
             <p data-testid="about-text" className="font-body text-zinc-400 text-base leading-loose mb-8">
               Luke-holič z garáže není obyčejné holičství. Je to místo, kde se
-              potkává poctivé řemeslo s rock'n'rollovou atmosférou. Interiér
+              potkává poctivé řemeslo s rock&apos;n&apos;rollovou atmosférou. Interiér
               vyladěný do posledního detailu, melodie Rolling Stones v pozadí,
               nachlazený Birell nebo Kofola v ruce — a k tomu střih, se kterým
               odcházíte s úsměvem na tváři.
