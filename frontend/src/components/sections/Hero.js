@@ -7,8 +7,8 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1920&q=80"
-          alt="Vintage barbershop"
+          src="https://lh5.googleusercontent.com/p/AF1QipOYW0WcYAxGDIZHFo5lbY2OUodC3wwxmXBRf3tl=w1920-h1080-k-no"
+          alt="Luke-holič z garáže interiér"
           className="w-full h-full object-cover"
           style={{ filter: "sepia(20%) saturate(0.85) brightness(0.7)" }}
         />
