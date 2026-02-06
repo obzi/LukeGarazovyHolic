@@ -46,7 +46,7 @@ export default function Hero() {
             data-testid="hero-description"
             className="font-body text-zinc-400 text-lg sm:text-xl max-w-xl leading-relaxed mb-10"
           >
-            Kde se potkává rock'n'roll s precizním střihem. Osobní přístup,
+            Kde se potkává rock&apos;n&apos;roll s precizním střihem. Osobní přístup,
             garáž plná stylu a poctivé řemeslo.
           </p>
 

@@ -70,7 +70,7 @@ export default function Reviews() {
             >
               <StarRow />
               <p className="font-body text-zinc-300 text-sm leading-relaxed mb-6 group-hover:text-zinc-100 transition-colors">
-                "{r.text}"
+                &ldquo;{r.text}&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-garage-amber/20 flex items-center justify-center">

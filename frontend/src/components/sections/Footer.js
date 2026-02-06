@@ -10,7 +10,7 @@ export default function Footer() {
               LUKE<span className="text-garage-amber">-</span>HOLIČ
             </h3>
             <p className="font-body text-zinc-500 text-sm leading-relaxed">
-              Kde se potkává rock'n'roll s precizním střihem. Garáž plná stylu v
+              Kde se potkává rock&apos;n&apos;roll s precizním střihem. Garáž plná stylu v
               srdci Králova Pole.
             </p>
           </div>
