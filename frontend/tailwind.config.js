@@ -8,8 +8,8 @@ module.exports = {
   theme: {
         extend: {
                 fontFamily: {
-                        heading: ['Oswald', 'sans-serif'],
-                        body: ['Montserrat', 'sans-serif'],
+                        heading: ['Alfa Slab One', 'serif'],
+                        body: ['Lora', 'serif'],
                         vintage: ['Playfair Display', 'serif'],
                 },
                 colors: {
@@ -17,8 +17,8 @@ module.exports = {
                                 dark: '#1a1814',
                                 mid: '#231f1b',
                                 panel: '#2c2620',
-                                teal: '#1a9e8f',
-                                'teal-light': '#2abfad',
+                                teal: '#1586a5',
+                                'teal-light': '#1a9fc4',
                                 cream: '#f0e0c8',
                                 'cream-dark': '#c4b69c',
                                 metal: '#8a8070',
