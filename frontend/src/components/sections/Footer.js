@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <h3 className="font-heading text-2xl font-bold uppercase tracking-widest text-white mb-4">
-              LUKE<span className="text-garage-teal">-</span>HOLI&Ccedil;
+              LUKE<span className="text-garage-teal">-</span>HOLIČ
             </h3>
             <p className="font-body text-slate-500 text-sm leading-relaxed">
               Kde se potkává rock&apos;n&apos;roll s precizním střihem. Garáž plná stylu v

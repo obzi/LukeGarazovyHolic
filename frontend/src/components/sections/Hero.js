@@ -35,7 +35,7 @@ export default function Hero() {
           >
             Luke
             <br />
-            <span className="text-garage-teal">Holi&ccedil;</span>
+            <span className="text-garage-teal">Holič</span>
             <br />
             <span className="text-slate-500 text-4xl sm:text-5xl lg:text-6xl">
               z garáže

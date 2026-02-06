@@ -41,7 +41,7 @@ export default function Navbar() {
           className="font-heading text-2xl sm:text-3xl font-bold uppercase tracking-widest text-white hover:text-garage-teal transition-colors"
           onClick={(e) => handleClick(e, "#hero")}
         >
-          LUKE<span className="text-garage-teal">-</span>HOLI&Ccedil;
+          LUKE<span className="text-garage-teal">-</span>HOLIČ
         </a>
 
         <div className="hidden md:flex items-center gap-10">
