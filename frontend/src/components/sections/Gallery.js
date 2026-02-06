@@ -1,12 +1,12 @@
 const GOOGLE_PHOTOS_URL = "https://www.google.com/maps/place/Luke-holi%C4%8D+z+gar%C3%A1%C5%BEe/@49.2219198,16.5873998,17z/data=!3m1!1s0x471295f0bdf8a047:0x4be49f339d522f5d";
 
 const GALLERY_ITEMS = [
-  { src: "https://lh5.googleusercontent.com/p/AF1QipOYW0WcYAxGDIZHFo5lbY2OUodC3wwxmXBRf3tl=w650-h486-k-no", alt: "Interiér holičství", span: "col-span-1 row-span-2" },
-  { src: "https://lh5.googleusercontent.com/p/AF1QipPyt1cihSdY9_eOvva7p97Aq3r7L26cKSNbSozJ=w369-h500-k-no", alt: "Detail holičství", span: "col-span-1 row-span-1" },
-  { src: "https://lh5.googleusercontent.com/p/AF1QipNw09RBDH1RrW-ygICDGPDztQTjcqv61U9WuOoG=w650-h480-k-no", alt: "Pracovní místo", span: "col-span-1 row-span-1" },
-  { src: "https://lh5.googleusercontent.com/p/AF1QipMisrwyF66EkxLvVmZsLme0nnVc2CD6UQp3dheO=w375-h500-k-no", alt: "Atmosféra garáže", span: "col-span-1 row-span-2" },
-  { src: "https://lh5.googleusercontent.com/p/AF1QipPN0Wnlz_0qylHTbK59yG9hh604jtmJSbo9AwDP=w375-h500-k-no", alt: "Barber vybavení", span: "col-span-1 row-span-1" },
-  { src: "https://lh5.googleusercontent.com/p/AF1QipM4_K6eb7WskSmhDQZe33C2hlg3KtN-lhKt3-I6=w375-h500-k-no", alt: "Luke v akci", span: "col-span-1 row-span-1" },
+  { src: "/photos/photo1.jpg", alt: "Interiér holičství", span: "col-span-1 row-span-2" },
+  { src: "/photos/photo2.jpg", alt: "Výloha garáže", span: "col-span-1 row-span-1" },
+  { src: "/photos/photo3.jpg", alt: "Pracovní místo", span: "col-span-1 row-span-1" },
+  { src: "/photos/photo4.jpg", alt: "Atmosféra garáže", span: "col-span-1 row-span-2" },
+  { src: "/photos/photo5.jpg", alt: "Barber vybavení", span: "col-span-1 row-span-1" },
+  { src: "/photos/photo6.jpg", alt: "Luke v akci", span: "col-span-1 row-span-1" },
 ];
 
 export default function Gallery() {

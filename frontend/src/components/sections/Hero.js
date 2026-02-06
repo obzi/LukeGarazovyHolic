@@ -7,7 +7,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <img
-          src="https://lh5.googleusercontent.com/p/AF1QipOYW0WcYAxGDIZHFo5lbY2OUodC3wwxmXBRf3tl=w1920-h1080-k-no"
+          src="/photos/hero.jpg"
           alt="Luke-holič z garáže interiér"
           className="w-full h-full object-cover"
           style={{ filter: "sepia(20%) saturate(0.85) brightness(0.7)" }}
