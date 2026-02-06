@@ -3,81 +3,118 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --radius: 0.25rem;
-  }
-
+  :root { --radius: 0.25rem; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-  }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
   body {
     font-family: 'Lora', serif;
-    background-color: #1a1814;
+    background-color: #171310;
     color: #c4b69c;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
 
-  /* heavy grain texture */
+  /* heavy grain overlay */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.045;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 200px 200px;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px;
   }
 
-  ::selection { background-color: #1586a5; color: #1a1814; }
+  /* scratched overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.02;
+    background: repeating-linear-gradient(
+      90deg, transparent 0px, transparent 3px,
+      rgba(255,255,255,0.03) 3px, rgba(255,255,255,0.03) 4px
+    );
+  }
 
+  ::selection { background-color: #0e7fa0; color: #171310; }
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #1a1814; }
-  ::-webkit-scrollbar-thumb { background: #3d362e; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #1586a5; }
+  ::-webkit-scrollbar-track { background: #171310; }
+  ::-webkit-scrollbar-thumb { background: #3d362e; border-radius: 0; }
+  ::-webkit-scrollbar-thumb:hover { background: #0e7fa0; }
 }
 
 @layer components {
-  .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
+  .section-container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
   .section-title {
-    @apply font-heading text-4xl sm:text-5xl lg:text-6xl uppercase tracking-wider font-bold;
+    @apply font-heading text-4xl sm:text-5xl lg:text-6xl uppercase tracking-wider;
   }
 
-  .teal-line {
-    @apply w-16 h-[2px] bg-garage-teal;
-  }
+  .teal-line { @apply w-16 h-[2px] bg-garage-teal; }
 
   .glass-card {
-    @apply bg-black/30 backdrop-blur-md border border-white/10 rounded-sm;
+    @apply bg-black/30 backdrop-blur-md border border-white/10;
+  }
+
+  /* corrugated metal texture */
+  .corrugated {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.015) 0px,
+        rgba(255,255,255,0.015) 1px,
+        transparent 1px,
+        transparent 8px
+      );
+  }
+
+  /* vintage card - like old tin sign */
+  .tin-card {
+    background: #1e1a16;
+    border: 2px solid #3a332b;
+    position: relative;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.4), 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .tin-card::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(196,182,156,0.08);
+    pointer-events: none;
   }
 
   /* vintage ornamental divider */
-  .ornament {
+  .ornament-div {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     justify-content: center;
   }
-  .ornament::before,
-  .ornament::after {
-    content: '';
-    height: 1px;
-    width: 40px;
-    background: linear-gradient(to right, transparent, #5a4f42, transparent);
+  .ornament-div::before,
+  .ornament-div::after {
+    content: '—————';
+    font-size: 10px;
+    letter-spacing: -1px;
+    color: #3a332b;
   }
 
-  /* retro card */
-  .retro-card {
-    @apply bg-garage-mid border border-garage-panel rounded-sm;
-    box-shadow: inset 0 1px 0 rgba(240,224,200,0.04), 0 4px 20px rgba(0,0,0,0.3);
+  /* worn stamp border */
+  .worn-border {
+    border: 3px solid #3a332b;
+    outline: 2px solid #3a332b;
+    outline-offset: 5px;
+    position: relative;
+  }
+  .worn-border::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 1px dashed rgba(196,182,156,0.1);
+    pointer-events: none;
   }
 }
