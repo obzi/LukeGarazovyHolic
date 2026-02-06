@@ -10,18 +10,20 @@ module.exports = {
                 fontFamily: {
                         heading: ['Oswald', 'sans-serif'],
                         body: ['Montserrat', 'sans-serif'],
+                        vintage: ['Playfair Display', 'serif'],
                 },
                 colors: {
                         garage: {
-                                dark: '#070d17',
-                                zinc: '#0c1525',
-                                panel: '#162033',
-                                teal: '#2dd4bf',
-                                'teal-deep': '#0d9488',
-                                cream: '#f0e6d3',
-                                metal: '#8b9cb7',
-                                navy: '#1e3a5f',
-                                stripe: '#0e2a4a',
+                                dark: '#1a1814',
+                                mid: '#231f1b',
+                                panel: '#2c2620',
+                                teal: '#1a9e8f',
+                                'teal-light': '#2abfad',
+                                cream: '#f0e0c8',
+                                'cream-dark': '#c4b69c',
+                                metal: '#8a8070',
+                                rust: '#a0522d',
+                                stripe: '#262018',
                         },
                 },
                 borderRadius: {
@@ -34,14 +36,9 @@ module.exports = {
                                 '0%': { opacity: '0', transform: 'translateY(30px)' },
                                 '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
-                        'slide-in-left': {
-                                '0%': { opacity: '0', transform: 'translateX(-40px)' },
-                                '100%': { opacity: '1', transform: 'translateX(0)' },
-                        },
                 },
                 animation: {
                         'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
-                        'slide-in-left': 'slide-in-left 0.6s ease-out forwards',
                 },
         }
   },
