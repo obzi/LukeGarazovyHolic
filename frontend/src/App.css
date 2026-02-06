@@ -34,7 +34,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #1a9e8f;
+  background-color: #1586a5;
   transition: width 0.3s ease;
 }
 .nav-link:hover::after { width: 100%; }
@@ -44,7 +44,7 @@
   background: repeating-linear-gradient(
     -45deg,
     transparent 0px, transparent 18px,
-    rgba(26,158,143,0.04) 18px, rgba(26,158,143,0.04) 20px
+    rgba(21,134,165,0.04) 18px, rgba(21,134,165,0.04) 20px
   );
 }
 

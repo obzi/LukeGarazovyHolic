@@ -15,7 +15,7 @@
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', serif;
     background-color: #1a1814;
     color: #c4b69c;
     -webkit-font-smoothing: antialiased;
@@ -35,12 +35,12 @@
     background-size: 200px 200px;
   }
 
-  ::selection { background-color: #1a9e8f; color: #1a1814; }
+  ::selection { background-color: #1586a5; color: #1a1814; }
 
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: #1a1814; }
   ::-webkit-scrollbar-thumb { background: #3d362e; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #1a9e8f; }
+  ::-webkit-scrollbar-thumb:hover { background: #1586a5; }
 }
 
 @layer components {
