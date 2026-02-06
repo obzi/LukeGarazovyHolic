@@ -29,7 +29,7 @@ export default function Reviews() {
     <section id="recenze" data-testid="reviews-section" className="py-24 sm:py-32 bg-garage-mid">
       <div className="section-container">
         <div className="text-center mb-14">
-          <div className="ornament mb-6">
+          <div className="ornament-div mb-6">
             <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Reálné recenze z Google</span>
           </div>
           <h2 data-testid="reviews-title" className="section-title text-garage-cream">
@@ -50,7 +50,7 @@ export default function Reviews() {
           {REVIEWS.map((r, i) => (
             <a key={i} href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer"
               data-testid={`review-card-${i}`}
-              className="block retro-card p-6 sm:p-7 hover:border-garage-teal/25 transition-colors group"
+              className="block tin-card rust-edge p-6 sm:p-7 hover:border-garage-teal/25 transition-colors group"
             >
               <Stars />
               <p className="font-body text-garage-cream-dark text-sm leading-relaxed mb-5 group-hover:text-garage-cream transition-colors">

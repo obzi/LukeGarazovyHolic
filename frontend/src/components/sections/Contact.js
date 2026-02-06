@@ -5,7 +5,7 @@ export default function Contact() {
     <section id="kontakt" data-testid="contact-section" className="py-24 sm:py-32 bg-garage-dark barber-stripe">
       <div className="section-container">
         <div className="text-center mb-16">
-          <div className="ornament mb-6">
+          <div className="ornament-div mb-6">
             <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Kde nás najdete</span>
           </div>
           <h2 data-testid="contact-title" className="section-title text-garage-cream">Kontakt</h2>

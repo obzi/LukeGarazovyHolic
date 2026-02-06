@@ -18,7 +18,7 @@ export default function OpeningHours() {
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div className="ornament mb-6 justify-start">
+            <div className="ornament-div mb-6 justify-start">
               <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Kdy nás najdete</span>
             </div>
             <h2 data-testid="hours-title" className="section-title text-garage-cream mb-6">
@@ -34,7 +34,7 @@ export default function OpeningHours() {
             </div>
           </div>
 
-          <div className="retro-card p-8 sm:p-10">
+          <div className="tin-card rust-edge p-8 sm:p-10">
             {HOURS.map((h, i) => (
               <div key={i} data-testid={`hours-row-${i}`}
                 className={`flex items-center justify-between py-4 border-b border-garage-panel/60 last:border-0 ${i === todayIdx ? "text-garage-teal" : ""}`}

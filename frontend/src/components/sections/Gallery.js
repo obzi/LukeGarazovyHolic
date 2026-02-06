@@ -14,7 +14,7 @@ export default function Gallery() {
     <section id="galerie" data-testid="gallery-section" className="py-24 sm:py-32 bg-garage-dark barber-stripe">
       <div className="section-container">
         <div className="text-center mb-16">
-          <div className="ornament mb-6">
+          <div className="ornament-div mb-6">
             <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Atmosféra</span>
           </div>
           <h2 data-testid="gallery-title" className="section-title text-garage-cream">

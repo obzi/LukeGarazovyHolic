@@ -14,7 +14,7 @@ export default function Awards() {
       <div className="section-container">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-shrink-0 text-center lg:text-left">
-            <div className="ornament mb-5 justify-start">
+            <div className="ornament-div mb-5 justify-start">
               <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Ocenění</span>
             </div>
             <h2 data-testid="awards-title" className="font-heading text-3xl sm:text-4xl uppercase tracking-wider font-bold text-garage-cream mb-3">

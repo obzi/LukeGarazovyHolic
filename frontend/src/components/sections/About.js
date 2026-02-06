@@ -21,7 +21,7 @@ export default function About() {
           </div>
 
           <div>
-            <div className="ornament mb-8 justify-start">
+            <div className="ornament-div mb-8 justify-start">
               <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Příběh</span>
             </div>
 

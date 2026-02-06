@@ -12,7 +12,7 @@ export default function Services() {
     <section id="sluzby" data-testid="services-section" className="py-24 sm:py-32 bg-garage-dark barber-stripe">
       <div className="section-container">
         <div className="text-center mb-16">
-          <div className="ornament mb-6">
+          <div className="ornament-div mb-6">
             <span className="font-vintage italic text-garage-teal text-sm tracking-wider">Co nabízíme</span>
           </div>
           <h2 data-testid="services-title" className="section-title text-garage-cream">
@@ -20,7 +20,7 @@ export default function Services() {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto retro-card p-6 sm:p-10">
+        <div className="max-w-3xl mx-auto tin-card rust-edge p-6 sm:p-10">
           {SERVICES.map((s, i) => (
             <div key={i} data-testid={`service-item-${i}`}
               className="group py-5 border-b border-dashed border-garage-panel last:border-0 hover:border-garage-teal/20 transition-colors"
