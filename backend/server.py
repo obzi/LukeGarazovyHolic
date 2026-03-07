@@ -1,12 +1,12 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from pydantic import BaseModel, Field, ConfigDict, EmailStr
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
 
@@ -37,6 +37,23 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+
+# Contact form models
+class ContactMessage(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    phone: str
+    message: str
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class ContactMessageCreate(BaseModel):
+    name: str = Field(min_length=2, max_length=100)
+    phone: str = Field(min_length=9, max_length=20)
+    message: str = Field(min_length=5, max_length=1000)
+
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -65,6 +82,23 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
+
+@api_router.post("/contact", response_model=ContactMessage)
+async def submit_contact(input: ContactMessageCreate):
+    msg_obj = ContactMessage(**input.model_dump())
+    doc = msg_obj.model_dump()
+    doc['timestamp'] = doc['timestamp'].isoformat()
+    await db.contact_messages.insert_one(doc)
+    return msg_obj
+
+@api_router.get("/contact", response_model=List[ContactMessage])
+async def get_contact_messages():
+    messages = await db.contact_messages.find({}, {"_id": 0}).to_list(1000)
+    for m in messages:
+        if isinstance(m['timestamp'], str):
+            m['timestamp'] = datetime.fromisoformat(m['timestamp'])
+    return messages
+
 
 # Include the router in the main app
 app.include_router(api_router)
